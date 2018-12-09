@@ -6,8 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="./img/touch-icon.png" />
   <link rel="shortcut icon" href="./favicon.ico" />
+  
+<!--
   <link rel="stylesheet" href="./css/bootstrap-custom.css"/>
   <link rel="stylesheet" href="./css/app.css"/>
+-->
+  <?php wp_head(); ?>
 
   <!--[if lt IE 9]>
   <meta http-equiv="Imagetoolbar" content="no" />
@@ -264,9 +268,12 @@
 
 </div>
 
+<!--
 <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/app.js"></script>
+-->
+<?php wp_footer(); ?>  
 
 </body>
 </html>
