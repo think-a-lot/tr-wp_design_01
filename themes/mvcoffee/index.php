@@ -56,7 +56,7 @@
     <div class="mainvisual ">
       <div class="container page-title">
 
-        <h2 class="font-serif text-right"><img src="./img/img-home-mainvisual-effect.png" alt="HOME VISUAL" /></h2>
+        <h2 class="font-serif text-right"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/img/img-home-mainvisual-effect.png" alt="HOME VISUAL" /></h2>
 
       </div>
     </div>
@@ -75,7 +75,7 @@
         <ul class="home-nav__list row list-unstyled">
           <li class="home-nav__cafe col-xs-12 col-sm-4">
             <div class="home-nav__thumbnail">
-              <a href="./menu.html#menu-cafe"><img src="./img/nav-cafe.jpg" alt="" class="img-responsive img-thumbnail"/></a>
+              <a href="./menu.html#menu-cafe"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/img/nav-cafe.jpg" alt="" class="img-responsive img-thumbnail"/></a>
             </div>
             <div class="home-nav__text">
               <h2><a href="./menu.html#menu-cafe" class="text-hide">CAFE</a></h2>
@@ -84,7 +84,7 @@
           </li>
           <li class="home-nav__lunch col-xs-12 col-sm-4">
             <div class="home-nav__thumbnail">
-              <a href="./menu.html#menu-lunch"><img src="./img/nav-lunch.jpg" alt="" class="img-responsive img-thumbnail"/></a>
+              <a href="./menu.html#menu-lunch"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/img/nav-lunch.jpg" alt="" class="img-responsive img-thumbnail"/></a>
             </div>
             <div class="home-nav__text">
               <h2><a href="./menu.html#menu-lunch" class="text-hide">LUNCH</a></h2>
@@ -93,7 +93,7 @@
           </li>
           <li class="home-nav__dinner col-xs-12 col-sm-4">
             <div class="home-nav__thumbnail">
-              <a href="./menu.html#menu-dinner"><img src="./img/nav-dinner.jpg" alt="" class="img-responsive img-thumbnail"/></a>
+              <a href="./menu.html#menu-dinner"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/img/nav-dinner.jpg" alt="" class="img-responsive img-thumbnail"/></a>
             </div>
             <div class="home-nav__text">
               <h2><a href="./menu.html#menu-dinner" class="text-hide">DINNER</a></h2>
@@ -114,7 +114,7 @@
 
           <section class="entry entry--simple entry--excerpt col-xs-12 col-sm-6">
             <div class="entry-thumbnail">
-              <a href="#"><span class="entry__new-mark">NEW</span><img src="./img/demo/img-postlist-000.jpg" alt="" class="img-thumbnail"/></a>
+              <a href="#"><span class="entry__new-mark">NEW</span><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/img/demo/img-postlist-000.jpg" alt="" class="img-thumbnail"/></a>
             </div>
             <div class="entry-meta">
               <div class="entry-meta__time">
@@ -130,7 +130,7 @@
 
           <section class="entry entry--simple entry--excerpt col-xs-12 col-sm-6">
             <div class="entry-thumbnail">
-              <a href="#"><img src="./img/demo/img-postlist-008.jpg" alt="" class="img-thumbnail"/></a>
+              <a href="#"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/img/demo/img-postlist-008.jpg" alt="" class="img-thumbnail"/></a>
             </div>
             <div class="entry-meta">
               <div class="entry-meta__time">
@@ -146,7 +146,7 @@
 
           <section class="entry entry--simple entry--excerpt col-xs-12 col-sm-6">
             <div class="entry-thumbnail">
-              <a href="#"><img src="./img/demo/img-postlist-003.jpg" alt="" class="img-thumbnail"/></a>
+              <a href="#"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/img/demo/img-postlist-003.jpg" alt="" class="img-thumbnail"/></a>
             </div>
             <div class="entry-meta">
               <div class="entry-meta__time">
@@ -162,7 +162,7 @@
 
           <section class="entry entry--simple entry--excerpt col-xs-12 col-sm-6">
             <div class="entry-thumbnail">
-              <a href="#"><img src="./img/demo/img-postlist-004.jpg" alt="" class="img-thumbnail"/></a>
+              <a href="#"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/img/demo/img-postlist-004.jpg" alt="" class="img-thumbnail"/></a>
             </div>
             <div class="entry-meta">
               <div class="entry-meta__time">
@@ -226,7 +226,7 @@
               <h3 class="text-center font-serif">ACCESS</h3>
             </div>
             <div class="home-map__img">
-              <img src="./img/img-home-utilities__map.png" alt="" class="img-responsive" />
+              <img src="<?php echo esc_url(get_template_directory_uri() ); ?>/img/img-home-utilities__map.png" alt="" class="img-responsive" />
             </div>
             <address class="home-map__address address">
               <p class="address__name">Maverick Coffee</p>
@@ -254,9 +254,9 @@
 
     <div class="footer__social">
       <ul class="text-center clearfix">
-        <li><a href="https://www.facebook.com/wp.business.book" target="_blank"><img src="./img/btn-facebook.png" alt="Facebook"/></a></li>
-        <li><a href="#" target="_blank"><img src="./img/btn-twitter.png" alt="Twitter"/></a></li>
-        <li><a href="#" target="_blank"><img src="./img/btn-instagram.png" alt="instagram"/></a></li>
+        <li><a href="https://www.facebook.com/wp.business.book" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/img/btn-facebook.png" alt="Facebook"/></a></li>
+        <li><a href="#" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/img/btn-twitter.png" alt="Twitter"/></a></li>
+        <li><a href="#" target="_blank"><img src="<?php echo esc_url(get_template_directory_uri() ); ?>/img/btn-instagram.png" alt="instagram"/></a></li>
       </ul>
     </div>
 
