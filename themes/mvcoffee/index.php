@@ -1,4 +1,6 @@
 
+<?php get_header(); ?>
+
   <main id="wrap-container" role="main">
 
     <nav id="home-nav" class="home-nav">
