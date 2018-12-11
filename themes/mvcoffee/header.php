@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html lang="ja">
+<!--<html lang="ja">-->
+<html <?php language_attributes(); ?>
 <head>
-  <meta charset="UTF-8">
+<!--  <meta charset="UTF-8">-->
+  <meta charset="<?php bloginfo('charset'); ?>">
+  
 <!--  <title>Maverick Coffee</title>-->
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
