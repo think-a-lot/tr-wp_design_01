@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--<html lang="ja">-->
-<html <?php language_attributes(); ?>
+<html <?php language_attributes(); ?>>
 <head>
 <!--  <meta charset="UTF-8">-->
   <meta charset="<?php bloginfo('charset'); ?>">
