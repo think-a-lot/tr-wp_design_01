@@ -15,7 +15,7 @@
     </div>
 
     <div class="footer__copyright">
-      <p class="text-center"><small>Copyright &copy; MaverickCoffee</small></p>
+      <p class="text-center"><small>Copyright &copy; <?php bloginfo('name'); ?></small></p>
     </div>
 
   </footer>
