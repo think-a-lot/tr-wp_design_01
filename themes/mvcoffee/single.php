@@ -8,7 +8,7 @@
         <main id="main-col" class="col-xs-12 col-md-9" role="main">
           <div class="main-col__inner">
 
-
+          <?php while ( have_posts() ) : the_post(); ?>
             <article class="entry hentry">
               <header class="entry-header">
                 <h1 class="entry-title">８月 新メニューのお知らせ</h1>
