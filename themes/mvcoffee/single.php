@@ -12,9 +12,12 @@
             <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?> >
               <header class="entry-header">
                 <h1 class="entry-title"><?php the_title(); ?></h1>
-                <div class="entry-thumbnail">
-                  <img src="./img/demo/img-postlist-000.jpg" alt="" class="img-thumbnail img-responsive"/>
-                </div>
+                <?php if( has_post_thumbnail(); ); ?>
+                  <div class="entry-thumbnail">
+                    <?php the_post_thumbnail( 'post-thumbnail', array( 'class'=>'img-thumbnail img-responsive','alt'=>the_title_attribute('echo=0'),'title'=>the_title_attribute('echo=0') ) ); ?>
+                    <img src="./img/demo/img-postlist-000.jpg" alt="" class="img-thumbnail img-responsive"/>
+                  </div>
+                <?php endif; ?>
               </header>
               <div class="entry-content clearfix">
                 <p>８月の新メニューが登場しました！</p>
