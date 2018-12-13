@@ -20,17 +20,14 @@
                 <?php endif; ?>
               </header>
               <div class="entry-content clearfix">
-                <p>８月の新メニューが登場しました！</p>
-                <p>ランチタイムには季節の野菜をふんだんに使ったパニーニのＡセットが ￥８００円！ぜひこの機会にお召し上がりください～！</p>
-                <p>パニーニはフレッシュレタスと大人気のイタリアンハムを使用しました。使用しているパンの塩加減と甘さがとても相性良く、まさにランチタイムにぴったりなものとなっております。</p>
-                <p>お次は大人気のムーをご紹介します！</p>
-                <h2>ムーを使用したフレンチトースト</h2>
-                <p><img class="alignleft" src="./img/demo/img-post-001.jpg" alt=""/></p>
-                <p>大人気のフレンチトーストですが、こちらの人気の理由をご紹介します♪</p>
-                <p>外側はこんがりデニッシュのような食感で、中はタマゴが染みこんでとろとろ！大きさはそんなにありませんが、とても食べ応えのある一品です！</p>
-                <p>しっかりとフレンチトーストの味がついているのでそのままでも美味しく召し上がれますが、はちみつをつけて食べてもまた美味しいです！</p>
-                <p>一度食べたら忘れられないフレンチトースト！<br/>
-                  作りたてのバターの風味と香りを是非お試し下さい！</p>
+                <?php the_content(); wp_link_page( array( 
+                  'before' => '<div class="entry__page-links">' , 
+                  'after' => '</div>',
+                  'link_before' => '<span class="btn btn-default">',
+                  'link_after' => '</span>',
+                  'pagelink' => '%ページ',
+                  'separator' => ' ',
+                 ) ); ?>
               </div>
               <footer class="entry-footer">
                 <div class="entry-meta text-right">
