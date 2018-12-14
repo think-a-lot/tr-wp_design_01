@@ -20,7 +20,7 @@
                 <?php endif; ?>
               </header>
               <div class="entry-content clearfix">
-                <?php the_content(); wp_link_page( array( 
+                <?php the_content(); wp_link_pages( array( 
                   'before' => '<div class="entry__page-links">' , 
                   'after' => '</div>',
                   'link_before' => '<span class="btn btn-default">',
@@ -32,8 +32,9 @@
               <footer class="entry-footer">
                 <div class="entry-meta text-right">
                   <div class="entry-meta__time">
-                    <span class="glyphicon glyphicon-time"></span><span class="vcard author"><a href="#" class="fn">Maverick staff</a></span> at <time datetime="2000-01-01">2000/00/00</time>
+                    <span class="glyphicon glyphicon-time"></span><span class="vcard author"><a href="#" class="fn">Maverick staff</a></span> at <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time( 'Y/m/d' ); ?></time>
                   </div>
+                  
                   <div class="entry-meta__tag">
                     <span class="glyphicon glyphicon-tag"></span>
                     <span><a href="#" rel="tag">menu</a></span><span><a href="#" rel="tag">おすすめ</a><a href="#" rel="tag">ランチ</a></span>
