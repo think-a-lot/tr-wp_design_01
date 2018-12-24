@@ -8,7 +8,6 @@
         <main id="main-col" class="col-xs-12 col-md-9" role="main">
           <div class="main-col__inner">
 
-          <?php while ( have_posts() ) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?> >
               <header class="entry-header">
                 <h1 class="entry-title"><?php the_title(); ?></h1>
