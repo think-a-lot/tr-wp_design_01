@@ -44,6 +44,23 @@
               </footer>
             </article>
 
+            <?php
+              $post_id = get_the_ID();
+              $categories = get_the_category($post_id);
+              foreach( $categories as $cat ) {
+                $catid = $cat->cat_ID;
+                break;
+              }
+              $recommend_posts = new WP_Query(
+                array(
+                  'posts_per_page' => 4,
+                  'cat' => $catid,
+                  'post__non_in' => array( $post_id )
+                )
+              );
+              if( $recommend_posts->have_posts() ):
+            ?>
+
             <aside class="recommend">
               <h2 class="recommend-title">関連記事</h2>
               <ul class="row">
