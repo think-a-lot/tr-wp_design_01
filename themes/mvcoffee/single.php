@@ -12,7 +12,7 @@
             <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?> >
               <header class="entry-header">
                 <h1 class="entry-title"><?php the_title(); ?></h1>
-                <?php if( has_post_thumbnail(); ); ?>
+                <?php if( has_post_thumbnail() ): ?>
                   <div class="entry-thumbnail">
                     <?php the_post_thumbnail( 'post-thumbnail', array( 'class'=>'img-thumbnail img-responsive','alt'=>the_title_attribute('echo=0'),'title'=>the_title_attribute('echo=0') ) ); ?>
                     <img src="./img/demo/img-postlist-000.jpg" alt="" class="img-thumbnail img-responsive"/>
@@ -32,13 +32,15 @@
               <footer class="entry-footer">
                 <div class="entry-meta text-right">
                   <div class="entry-meta__time">
-                    <span class="glyphicon glyphicon-time"></span><span class="vcard author"><a href="#" class="fn">Maverick staff</a></span> at <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time( 'Y/m/d' ); ?></time>
+                    <span class="glyphicon glyphicon-time"></span><span class="vcard author"><?php the_author_posts_link();?></span> at <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time( 'Y/m/d' ); ?></time>
                   </div>
                   
-                  <div class="entry-meta__tag">
-                    <span class="glyphicon glyphicon-tag"></span>
-                    <span><a href="#" rel="tag">menu</a></span><span><a href="#" rel="tag">おすすめ</a><a href="#" rel="tag">ランチ</a></span>
-                  </div>
+                  <?php if( has_tag() ): ?>
+                    <div class="entry-meta__tag">
+                      <span class="glyphicon glyphicon-tag"></span>
+                      <?php the_tags('<span>','</span><span>','</span>'); ?>
+                    </div>
+                  <?php endif; ?>
                 </div>
               </footer>
             </article>
