@@ -7,7 +7,8 @@
 
         <main id="main-col" class="col-xs-12 col-md-9" role="main">
           <div class="main-col__inner">
-
+          <?php while ( have_posts() ) : the_post(); ?>
+           
             <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?> >
               <header class="entry-header">
                 <h1 class="entry-title"><?php the_title(); ?></h1>
@@ -88,7 +89,7 @@
                 <?php endwhile; ?>
               </ul>
             </aside>
-            <?php endwhile; wp_reset_postdata(); ?>
+            <?php endif; wp_reset_postdata(); ?>
 
 
             <nav class="prevnext-nav">
@@ -97,7 +98,8 @@
                 <li class="prevnext-nav__right pull-right"><a class="text-right font-serif" href="#">NEXT</a></li>
               </ul>
             </nav>
-
+            
+            <?php endwhile; ?>
           </div>
         </main>
 
