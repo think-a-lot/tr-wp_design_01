@@ -64,32 +64,31 @@
             <aside class="recommend">
               <h2 class="recommend-title">関連記事</h2>
               <ul class="row">
-                <li class="entry entry--simple recommend__post col-xs-12 col-sm-6 col-md-6">
+                <?php
+                  while( $recommend_posts->have_posts() ): $recommend_posts->the_post(); 
+                ?>
+                <li <?php post_class('entry entry--simple recommend__post col-xs-12 col-sm-6 col-md-6'); ?>>
                   <div class="entry-thumbnail">
-                    <a href="#"><img src="./img/demo/img-postlist-005.jpg" alt="" class="img-responsive"/></a>
+                    <a href="<?php the_permalink(); ?>">
+                      <?php
+                        if( has_post_thumbnail() ):
+                          the_post_thumbnail( 'post-thumbnail', 
+                            array( 'class' => 'img-thumbnail', 'alt'=>the_title_attribute('echo=0'), 'title'=>the_title_attribute('echo=0') ) 
+                          );
+                        else: 
+                      ?>
+                      <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/img-noimage.jpg" alt="<?php the_title_attribute(); ?>" title="<?php the_title_attribute(); ?>" class="img-thumbnail">
+                      <?php endif; ?>
+                    </a>
                   </div>
-                  <h3 class="entry-title"><a href="#">７月 新メニューのお知らせ</a></h3>
+                  <h3 class="entry-title">
+                    <a href="<?php the_permalink(); ?>"><?php echo wp_trim_words( get_the_title(), 30 ); ?></a>
+                  </h3>
                 </li>
-                <li class="entry entry--simple recommend__post col-xs-12 col-sm-6 col-md-6">
-                  <div class="entry-thumbnail">
-                    <a href="#"><img src="./img/demo/img-postlist-006.jpg" alt="" class="img-responsive"/></a>
-                  </div>
-                  <h3 class="entry-title"><a href="#">大人気のムーを使用したフレンチトースト</a></h3>
-                </li>
-                <li class="entry entry--simple recommend__post col-xs-12 col-sm-6 col-md-6">
-                  <div class="entry-thumbnail">
-                    <a href="#"><img src="./img/demo/img-postlist-007.jpg" alt="" class="img-responsive"/></a>
-                  </div>
-                  <h3 class="entry-title"><a href="#">パニーニとエスプレッソ</a></h3>
-                </li>
-                <li class="entry entry--simple recommend__post col-xs-12 col-sm-6 col-md-6">
-                  <div class="entry-thumbnail">
-                    <a href="#"><img src="./img/demo/img-postlist-008.jpg" alt="" class="img-responsive"/></a>
-                  </div>
-                  <h3 class="entry-title"><a href="#">暑い夏の特製デザートゼリー</a></h3>
-                </li>
+                <?php endwhile; ?>
               </ul>
             </aside>
+            <?php endwhile; wp_reset_postdata(); ?>
 
 
             <nav class="prevnext-nav">
